@@ -1,0 +1,33 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+<style>
+
+    .transcationLable {
+        font-size: small;
+    }
+</style>
+
+<template>
+    <template is="dom-bind">
+        <div class="">
+            
+            <span class="transcationFiguresDate">
+                <label class="transcationLable">{{model.Date}}</label>
+            </span>
+            
+            <span class="transcationFiguresSalePrice">
+                <label class="transcationLable">{{model.SalePrice}}</label>
+            </span>
+
+            <span class="transcationFiguresCommission"> 
+                <label class="transcationLable">{{model.Commission}}</label>
+            </span>
+
+            <span  class="transcationFiguresAddress">
+                <label class="transcationLable">{{model.Address}}
+                </label>
+            </span>
+
+        </div>
+
+    </template>
+</template>

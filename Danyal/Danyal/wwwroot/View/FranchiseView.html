@@ -1,0 +1,24 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+<style>
+ .frachiseFigures span{
+display:inline-block;
+width:20%;
+float:left;
+ }
+  .frachiseLable{
+      font-size: medium;
+    font-weight: 500;
+
+ }
+</style>
+<template>
+    <template is="dom-bind">
+        <div class="frachiseFigures">
+            <span> <label  class="frachiseLable"><a href="/Danyal/partial/FranchiseDetail/{{model.UrlId}}">{{model.Name}}</a></label></span>
+            <span><label  class="frachiseLable">{{model.NoOfHomesSold}}</label></span>
+            <span><label  class="frachiseLable">{{model.TotalCommission}}</label></span>
+            <span><label  class="frachiseLable">{{model.AverageCommision}}</label></span>
+            <span><label  class="frachiseLable">{{model.Trend}}</label></span>
+        </div>
+</template>
+</template>

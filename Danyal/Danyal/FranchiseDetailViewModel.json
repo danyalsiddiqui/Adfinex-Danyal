@@ -1,0 +1,22 @@
+{
+  "Html": "/View/FranchiseDetailView.html",
+  "Name$": "",
+  "Street$": "",
+  "Number$": 0,
+  "ZipCode$": 0,
+  "City$": "",
+  "Country$": "",
+  "Address": "",
+  "SaveFranchiseAddress$": 0,
+  "NewHomeStreet$": "",
+  "NewHomeNumber$": 0,
+  "NewHomeZipCode$": 0,
+  "NewHomeCity$": "",
+  "NewHomeCountry$": "",
+  "NewHomeAddress": "",
+  "TransactionDate$": "",
+  "TransactionSalePrice$": 0,
+  "TransactionCommision$": 0,
+  "SaveTransaction$": 0,
+  "SoldHomes": [ {}]
+}

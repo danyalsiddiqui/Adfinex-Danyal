@@ -1,0 +1,229 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+<style>
+.measureHeadings span{
+    display:inline-block;
+    width:20%;
+    float:left;
+ }
+.transcationFigures span {
+    display: inline-block;
+    width: 20%;
+    float: left;
+}
+
+.transcationFiguresDate{
+    display: inline-block;
+    width: 20%;
+    float: left;
+ }
+
+.transcationFiguresSalePrice {
+    display: inline-block;
+    width: 10%;
+    float: left;
+ }
+
+.transcationFiguresCommission {
+    display: inline-block;
+    width: 10%;
+    float: left;
+}
+
+.transcationFiguresAddress {    
+    display: inline-block;
+    width: 60%;
+    float: left;
+}
+
+
+.TransactionHeadings {
+font-size: medium;
+font-weight: 700;
+}
+
+.TransactionBlock{
+    margin-top:30px;
+}
+
+.TransactionBlock-Form{
+    padding:5px
+}
+
+.TransactionBlock-Form label{
+      display: inline-block;
+    width: 15%;
+    float: left;
+}
+
+.TransactionBlock-Form span{
+     display: inline-block;
+     width:100%;
+    margin:5px 0px;
+}
+
+.NewHome-Details{
+    padding:5px
+}
+.NewHome-Details label{
+  display: inline-block;
+    width: 10%;
+    float: left;
+}
+.NewHome-Details input{
+  display: inline-block;
+    width: 20%;
+    float: left;
+}
+.NewHome-Details span{
+    display: inline-block;
+     width:100%;
+    margin:5px 0px;
+}
+.Franchise-Details{
+    padding:5px
+}
+.Franchise-Details label{
+  display: inline-block;
+    width: 10%;
+    float: left;
+}
+.Franchise-Details input{
+  display: inline-block;
+    width: 20%;
+    float: left;
+}
+.Franchise-Details span{
+    display: inline-block;
+     width:100%;
+    margin:5px 0px;
+}
+
+
+</style>
+
+<template>
+    <template is="dom-bind">
+        <b> <a href="/Danyal/Home"><< Back to start</a></b>
+        <h5>Settings: {{model.Name$}}</h5>
+        <b>Edit franchise settings</b>
+        <div class="Franchise-Details">
+            <span>
+                <label>Name :</label>
+                <input value="{{model.Name$::input}}" />
+            </span>
+            
+            <span>
+                <label>Street :</label>
+                <input value="{{model.Street$::input}}" />
+            </span>
+
+            <span>
+                <label>Number :</label>
+                <input value="{{model.Number$::input}}" />
+            </span>
+
+            <span>
+                <label>Zip Code :</label>
+                <input value="{{model.ZipCode$::input}}" />
+            </span>
+            
+            <span>
+                <label>City :</label>
+                <input value="{{model.City$::input}}" />
+            </span>
+            
+            <span>
+                <label>Country :</label>
+                <input value="{{model.Country$::input}}" />
+            </span>
+            <br /><br />
+            <lable>Address: {{model.Address}}</lable>
+            <br />
+            <button value="{{model.SaveFranchiseAddress$::click}}" onmousedown="++this.value">Save</button>
+        </div>
+        <h5>Register New Home of sale</h5>
+        <b>Home Info</b>
+        <br/ >
+
+        <div class="NewHome-Details">
+            <span>
+                <label>Street :</label>
+                <input value="{{model.NewHomeStreet$::input}}" />
+            </span>
+            <span>
+                <label>Number :</label>
+                <input value="{{model.NewHomeNumber$::input}}" />
+            </span>
+
+            <span>
+                <label>Zip Code :</label>
+                <input value="{{model.NewHomeZipCode$::input}}" />
+            </span>
+
+            <span>
+                <label>City :</label>
+                <input value="{{model.NewHomeCity$::input}}" />
+            </span>
+            <span>
+                <label>Country :</label>
+                <input value="{{model.NewHomeCountry$::input}}" />
+            </span>
+
+            <br /> <br />
+            <lable>Address: {{model.NewHomeAddress}}</lable>
+            <br />
+        </div>
+        <div class="TransactionBlock">
+
+            <b>Transaction Info</b><br />
+            <div class="TransactionBlock-Form">
+                <span>
+                    <label>Date (format '2016-04-01'):</label>
+                    <input value="{{model.TransactionDate$::input}}" />
+                </span>
+                <br />
+                <span>
+                    <label>Sale Price :</label>
+                    <input value="{{model.TransactionSalePrice$::input}}" />
+                </span>
+                <br />
+                <span>
+                    <label>Commission :</label>
+                    <input value="{{model.TransactionCommision$::input}}" />
+                </span>
+                <br />
+                <button value="{{model.SaveTransaction$::click}}" onmousedown="++this.value">Registor</button>
+            </div>
+
+
+                <h5>List of transactions</h5>
+
+                <div class="">
+            
+                    <span class="transcationFiguresDate">
+                        <lable class="TransactionHeadings">Date</lable>
+                    </span>
+
+                    <span class="transcationFiguresSalePrice">
+                        <lable class="TransactionHeadings">Sale Price</lable>
+                    </span>
+
+                    <span class="transcationFiguresCommission">
+                        <lable class="TransactionHeadings">Commission</lable>
+                    </span>
+            
+                    <span class="transcationFiguresAddress"> 
+                        <lable class="TransactionHeadings">Address</lable>
+                    </span>
+
+                </div>
+
+                <template is="dom-repeat" items="{{model.SoldHomes}}">
+                    <div>
+                        <starcounter-include partial="{{item}}"></starcounter-include>
+                    </div>
+                </template>
+            </div>
+    </template>
+</template>

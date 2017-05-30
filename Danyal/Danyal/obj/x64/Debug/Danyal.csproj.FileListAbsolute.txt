@@ -1,0 +1,5 @@
+C:\Users\Danya\Desktop\Danyal\Danyal\bin\Debug\Danyal.exe
+C:\Users\Danya\Desktop\Danyal\Danyal\bin\Debug\Danyal.pdb
+C:\Users\Danya\Desktop\Danyal\Danyal\obj\x64\Debug\Danyal.csprojResolveAssemblyReference.cache
+C:\Users\Danya\Desktop\Danyal\Danyal\obj\x64\Debug\Danyal.exe
+C:\Users\Danya\Desktop\Danyal\Danyal\obj\x64\Debug\Danyal.pdb

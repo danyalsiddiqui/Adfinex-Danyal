@@ -1,0 +1,64 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+<style>
+ .sortBtn span
+ {
+display:inline-block;
+width:20%;
+float:left;
+ }
+ .measureHeadings span{
+display:inline-block;
+width:20%;
+float:left;
+ }
+  .measureLable{
+      font-size: medium;
+    font-weight: 700;
+
+ }
+</style>
+
+
+<template>
+    <template is="dom-bind">
+        <h5 style="font-size: x-large;font-weight: 700;"> {{model.Name}} </h5>
+        <div style="font-size: larger;font-weight:700 ">Franchies offices</div>
+        <span style="font-size: medium;">Sort on</span>
+        <div class="sortBtn">
+            <span>-</span>
+            <span >
+                <button value="{{model.SortByNoOfHomes$::click}}" onmousedown="++this.value">Number of Homes</button>
+            </span>
+            <span>
+                <button value="{{model.SortByTotalCommission$::click}}" onmousedown="++this.value">Total Commission</button>
+            </span>
+            <span>
+                <button value="{{model.SortByAvgCommission$::click}}" onmousedown="++this.value">Average Commission</button>
+            </span>
+            <span>
+                <button value="{{model.SortByTrend$::click}}" onmousedown="++this.value">Positive Trend</button>
+            </span>
+        </div>
+        <br/>
+        <div class="measureHeadings">
+            <span> <lable class="measureLable">Name</lable></span>
+            <span><lable class="measureLable">Number of homes Sold</lable></span>
+            <span><lable class="measureLable">Total Commission</lable></span>
+            <span><lable class="measureLable">Average Commission</lable></span>
+            <span><lable class="measureLable">Trend</lable></span>
+        </div>
+
+        <template is="dom-repeat" items="{{model.Franchies}}">
+            <div>
+                <starcounter-include partial="{{item}}"></starcounter-include>
+            </div>
+        </template>
+        <div style="margin-top: 70px;">
+            <h5 style="margin-top:30px">New Franchise Offices</h5>
+
+            <label>Name: </label>
+            <input value="{{model.FranchiesName$::input}}" />
+            <button value="{{model.AddNewFranchies$::click}}" onmousedown="++this.value">Create New</button>
+        </div>
+    </template>
+</template>
